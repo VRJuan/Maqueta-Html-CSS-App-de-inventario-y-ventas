@@ -1,0 +1,103 @@
+.container {  display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 0.8fr 1fr 1.4fr 1fr 0.8fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+  }
+  
+  .cotent1 { grid-area: 2 / 2 / 3 / 3; }
+  
+  .cotent2 { grid-area: 3 / 2 / 4 / 3; }
+  
+  .cotent4 { grid-area: 4 / 2 / 5 / 3; }
+  
+  .Header { grid-area: 1 / 1 / 2 / 3; }
+  
+  .Footer-app {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . Firma"
+      ". . Firma"
+      ". . Firma";
+    grid-area: 5 / 2 / 6 / 3;
+  }
+  
+  .Firma { grid-area: Firma; }
+  
+  .right-side { grid-area: 2 / 1 / 6 / 2; }
+  
+  .Mail-icon { grid-area: 1 / 1 / 2 / 2; }
+  
+  .Menu-optioons { grid-area: 2 / 1 / 3 / 2; }
+  
+  .Icons { grid-area: 4 / 1 / 6 / 2; }
+  
+  .Search- {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . Icons-side"
+      "Serachs-bar Serachs-bar Icons-side"
+      ". . Icons-side";
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  
+  .Icons-side { grid-area: Icons-side; }
+  
+  .Serachs-bar { grid-area: Serachs-bar; }
+  
+  
+  html, body , .container {
+    height: 100%;
+    margin: 0;
+  }
+  
+  /* For presentation only, no need to copy the code below */
+  
+  /* .container * {
+    border: 1px solid red;
+    position: relative;
+  }
+  
+  .container *:after {
+    content:attr(class);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  } */
+  
+  .hoverable {
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+  }
+
+  .hoverable:hover {
+    background-color: #b6a93a; /* Cambia el color de fondo en el hover */
+  }
+
+  .hoverable img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+  }
+
+  .hoverable-img img {
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s; /* Transición suave para la transformación */
+  }
+
+  .hoverable-img img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño en el hover */
+  }
